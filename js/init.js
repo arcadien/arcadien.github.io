@@ -40,6 +40,14 @@
 
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
+        
+                // avoid FOUC #3
+                $html = $('html');
+                $html.removeClass('js');
+        
+                presentSkills("#skillCloud");
+                presentTimeLine();
+
 			});
 
 		// Touch?
@@ -103,9 +111,7 @@
 
 				}
    
-        // as this one may consume time, let it run just after the initialisation loop 
-        window.setTimeout(function(){ presentSkills("#skillCloud");}, 0);
-        presentTimeLine();
+   
 	});
 
 })(jQuery);

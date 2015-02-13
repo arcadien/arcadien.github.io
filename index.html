@@ -15,7 +15,18 @@
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
-		<script src="js/jquery.min.js"></script>
+        <!-- avoid FOUC #1 -->
+		<style type="text/css">
+        .js {display: none;}
+        </style>
+
+        <script src="js/jquery.min.js"></script>
+
+        <!-- avoid FOUC #2 -->
+        <script type="text/javascript">
+            $('html').addClass('js');
+        </script>
+
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 	
@@ -32,7 +43,9 @@
 	    <script src="js/modernizr.min.js"></script> <!-- Modernizr --> 
         <script src="js/timeline.js"></script> <!-- Resource jQuery -->
 	    <link rel="stylesheet" href="css/timeline.css"> <!-- Resource style -->
-   
+ 
+        <!-- avoid FOUC #3 -->
+        <!-- init will remove the .js class from html element -->
 		<script src="js/init.js"></script>
         
         <noscript>
@@ -43,7 +56,7 @@
 	</head>
 	<body id="top">
 
-		<!-- Header -->
+            <!-- Header -->
 			<header id="header">
 				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Sur le bateau pour la Corse et le GR20" /></a>
 				<h1 lang="en"><strong>I am Aurélien Labrosse</strong>, self made computer scientist, mountain lover, and dad.</h1>
@@ -383,6 +396,5 @@ Maintenance and evolution for SFR (former Neuf Telecom) ISP information system. 
                     <li>Vertical time line from <a href="http://codyhouse.co/gem/vertical-timeline/">codyhouse.co</a></li>
 				</ul>
 			</footer>
-
 	</body>
 </html>
