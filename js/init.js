@@ -41,11 +41,16 @@
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
         
+                nextLanguage(); 
+                
+                $("#langswitcher").on("click", function(){
+                 nextLanguage();
+                });
+                presentSkills("#skillCloud");
                 // avoid FOUC #3
                 $html = $('html');
                 $html.removeClass('js');
         
-                presentSkills("#skillCloud");
                 presentTimeLine();
 
 			});

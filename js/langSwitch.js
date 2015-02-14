@@ -1,5 +1,3 @@
-jQuery(document).ready(function($){
-
     /* for now, hide english content */
     var languages = ["fr", "en"];
     var currentLanguageIndex = 1;
@@ -22,9 +20,3 @@ jQuery(document).ready(function($){
             });
             
     }    
-    $("#langswitcher").on("click", function(){
-        nextLanguage();
-    });
-
-    nextLanguage(); 
-}); 
