@@ -1,16 +1,19 @@
 <!DOCTYPE HTML>
+
 <!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Layout from "Strata by HTML5 UP" html5up.net | @n33co Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
         <meta charset="utf-8">
-		<title>Skima - Aurelien Labrosse home page</title>
+		<title>Software Knowledge Information Management and Application</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Skima, Aurelien Labrosse online CV" />
+		<meta lang="fr" name="description" content="Aurélien Labrosse, analyse et développement logiciel" />
+		<meta lang="en" name="description" content="Aurélien Labrosse, software analysis and development" />
 		<meta name="keywords" content="awsome cv, awsome guy, software architect, MDD, MDA, UML, Eclipse RCP" />
+
+        <link rel="profile" href="http://microformats.org/profile/hcalendar">
 		
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -24,7 +27,7 @@
 
         <!-- avoid FOUC #2 -->
         <script type="text/javascript">
-            $('html').addClass('js');
+            $('body').addClass('js');
         </script>
 
 		<script src="js/skel.min.js"></script>
@@ -36,7 +39,7 @@
         <!-- @see http://www.jasondavies.com/wordcloud/ -->
         <script src="js/d3.min.js"></script>
 		<script src="js/d3.layout.cloud.js"></script>
-		<script src="js/skills.js"></script>
+		<script src="js/skills.min.js"></script>
 
         <!-- timeline -->
 	    <script src="js/modernizr.min.js"></script> <!-- Modernizr --> 
@@ -45,7 +48,7 @@
  
         <!-- avoid FOUC #3 -->
         <!-- init will remove the .js class from html element -->
-		<script src="js/init.js"></script>
+		<script src="js/init.min.js"></script>
         
         <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -53,32 +56,88 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 	</head>
-	<body id="top">
+	<body class="hresume" id="top">
+
+
+
+            <!-- ========================== Vcards : Myself, employers and customers =============================== -->
+
+            <!-- ========================== Myself -->
+            <div class="contact h-card vcard">
+                <span id="al-name" class="p-name fn n">
+                    <span class="p-given-name given-name">Aurélien</span>
+                    <span class="p-family-name family-name">Labrosse</span>
+                </span>
+                <span><a class="u-email email" href="mailto:aurelien@skima.fr"></a></span>
+                <span><a class="u-url url" href="http://www.skima.fr/"></a></span>
+                <span class="p-org org">
+                        <a href="#pollen-technology" class="include" title="Pollen Technology"><span class="organization-name">Pollen Technology</span></a>
+                </span>
+                <div class="p-adr adr">
+                    <span class="p-postal-code postal-code">38000</span>
+                    <span class="p-locality locality">Grenoble</span>
+                    <span class="p-state state">France</span>
+                </div>
+            </div>
+        
+
+            <!-- ======================== employers -->
+            <div id="pollen-technology" class="h-card vcard">
+                <span class="p-name fn org">Pollen Technology</span>
+                <span><a class="u-url url" href="http://www.pollen-technology.com/"></a></span>
+                <div class="p-adr adr">
+                    <span class="p-street-address street-address">PO GateOne, 31 rue Gustave Eiffel</span>
+                    <span class="p-postal-code postal-code">38000</span>
+                    <span class="p-locality locality">Grenoble</span>
+                    <span class="p-country country-name">France</span>
+                </div>
+                <img class="u-logo logo" alt="Pollen Technology logo" src="images/clients/pollen-disc.png" />
+            </div>
+            <div id="open-groupe" class="h-card vcard">
+                <span class="p-name fn org">Open Groupe</span>
+                <span><a class="u-url url" href="http://www.open-groupe.com/"></a></span>
+                <div class="p-adr adr">
+                    <span class="p-street-address street-address">10, Rue Lavoisier</span>
+                    <span class="p-postal-code postal-code">38330</span>
+                    <span class="p-locality locality">Montbonnot Saint Martin</span>
+                    <span class="p-state state">France</span>
+                </div>
+                <img class="u-logo logo" alt="Open groupe" src="images/clients/open.png" />
+            </div>
+            <!-- ======================== customers -->
+
 
             <!-- Header -->
 			<header id="header">
+
 				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Sur le bateau pour la Corse et le GR20" /></a>
 				<h1 lang="en"><strong>I am Aurélien Labrosse</strong>, self made computer scientist, mountain lover, and dad.</h1>
 				<h1 lang="fr"><strong>Je suis Aurélien Labrosse</strong>, informaticien globalement autodidacte, montagnard, et père de famille.</h1>
+
 			</header>
 
 		<!-- Main -->
 			<div id="main">
 
-                            <i class="icon fa fa-language" id="langswitcher"></i>
+                <i class="icon fa fa-language" id="langswitcher"></i>
+
 				<!-- One -->
 					<section id="one">
 						<header class="major">
 							<h2 lang="en">Welcome on Skima, my own place on the Network. This webpage is a presentation of my professional life.</h2>
 							<h2 lang="fr">Bienvenue sur Skima, mon espace dans le réseau. Cette page présente les grandes lignes de ma vie professionnelle.</h2>
 						</header>
-						<p lang="en">After a well-diversified journey in IT software world, i now specialize in software architecture.</p>
-						<p lang="en">I rely on UML and my expertise in continuous integration system (Maven, CMake, Jenkins, Git, git-flow) 
+                        <div lang="en">
+						  <p>After a well-diversified journey in IT software world, i now specialize in software architecture.</p>
+						  <p>I rely on UML and my expertise in continuous integration system (Maven, CMake, Jenkins, Git, git-flow) 
 					 	to create Eclipse RCP products. I'm also dad of Basile!</p>
-						<p lang="fr">Après un voyage bien diversifié dans le monde des nouvelles technologies, je me spécialise désormais dans l'architecture et la modélisation logicielle.</p>
-						<p lang="fr">J'utilise actuellement UML et mon expertise en système d'intégration (Maven, CMake, Jenkins, Git, git-flow) pour fournir des produits logiciels basé sur Eclips RCP. Je suis aussi le papa de Basile!</p>
-
-					</section>
+                        </div>
+                        <div lang="fr">
+						  <p>Après un voyage bien diversifié dans le monde des nouvelles technologies, je me spécialise désormais dans l'architecture et la modélisation logicielle.</p>
+						  <p>J'utilise actuellement UML et mon expertise en système d'intégration (Maven, CMake, Jenkins, Git, git-flow) pour fournir des produits logiciels basé sur Eclips RCP. Je suis aussi le papa de Basile!</p>
+					    </div>
+                         <p class="keywords">CSS, HTML, Javascript, Microformats, QIF</p>
+                    </section>
 
 				<!-- Two -->
 					<section id="two">
@@ -91,292 +150,388 @@
 
 					</section>
 
-	<section id="cd-timeline" class="cd-container">
+	<section id="cd-timeline" class="cd-container vcalendar">
+
+
 						<h2 lang="en">Work background</h2>
 						<h2 lang="fr">Expériences professionnelles</h2>
 
+            <div class="cd-timeline-block experience vevent">
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/pollen-disc.png" alt="Pollen Technology">
-			</div> <!-- cd-timeline-img -->
+                        <a href="#al-name"           class="contact include" title="Aurélien Labrosse"></a>
+                        <a href="#pollen-technology" class="org include"     title="Employer"></a>
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Co-founder - Product manager</h2>
-				<h2 lang="fr">Co-fondateur - Responsable produit</h2>
+                        <div class="cd-timeline-img">
+                                <img src="images/clients/pollen-disc.png" alt="Pollen Technology" />
+                        </div>
 
-                <p lang ="fr">Responsable de l'architecture et du développement de notre plateforme Platypus</p>
-                <p lang= "fr">Mise en place du processus de livraison continue</p>
-                <p lang="fr">Développement d'une implémentation UML du <a href="http://www.bipm.org/fr/publications/guides/vim.html">VIM</a>, et d'une application Eclipse RCP pour la manipuler</p>
+                        <div class="cd-timeline-content">
+                                  <h2 lang="en" class="summary">co-founder, Product manager</h2>
+                                  <h2 lang="fr" class="summary">co-fondateur, Responsable produit</h2>
 
-                <p lang="en">Responsible of global architecture and development of our Platypus platform</p>
-                <p lang="en">Implementation of continuous delivery stream</p>
-                <p lang="en">Development of an UML implementation of the <a href="http://www.bipm.org/en/publications/guides/vim.html">VIM</a>, and development of an Eclipse RCP application to manipulate it.</p>
-                <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake</p>
-				<span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
-				<span class="cd-date">09-2014</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                                  <div lang="en" class="description">
+                                    <p>Responsible of global architecture and development of our Platypus platform</p>
+                                    <p>Implementation of continuous delivery stream</p>
+                                    <p>Development of an UML implementation of the <a href="http://www.bipm.org/en/publications/guides/vim.html">VIM</a>, 
+                                       and development of an Eclipse RCP application to manipulate it</p>
+                                  </div>
 
+                                  <div lang="fr" class="description">
+                                    <p>Responsable de l'architecture et du développement de notre plateforme Platypus</p>
+                                    <p>Mise en place du processus de livraison continue</p>
+                                    <p>Développement d'une implémentation UML du <a href="http://www.bipm.org/fr/publications/guides/vim.html">VIM</a>, 
+                                       et d'une application Eclipse RCP pour la manipuler</p>
+                                  </div>
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open Groupe">
-			</div> <!-- cd-timeline-img -->
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho</p>
+                                  <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Web frontend developper</h2>
-				<h2 lang="fr">Développeur web</h2>
-				<p lang="fr">Développement web pour cible embarquée : migration de code existant (Ender.js) vers JQuery, portage des tests unitaires, validation du rendu HTML/CSS/JS</p>
-                <p lang="en">Migrate existing code from Ender.js bundle to JQuery. Port main code and test suite, ensure good graphical rendering (HTML/CSS/JS)</p>
-                <p class="keywords">Javascript, HTML, CSS, JQuery, Backbone, Jasmine, Node, Git</p>
-				<span class="cd-client"><img src="images/clients/schneider-electric.png" alt="Schneider Electric" /></span>
-				<span class="cd-date">12/2014 - 03/2015</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                                 <span class="cd-date">
+                                    <abbr class="dtstart" title="2014-09">Sept. 2014</abbr>
+                                    -
+                                    <abbr class="dtend" title="2015">Now</abbr>
+                                    <div class="adr">
+                                        <span class="location">Grenoble</span>,<span class="country-name">France</span>
+                                    </div>
+                                 </span>
+                        </div>
+            </div>
 
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open Groupe">
+                    </div> <!-- cd-timeline-img -->
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Web frontend developper</h2>
+                        <h2 lang="fr">Développeur web</h2>
+                        <p lang="fr">Développement web pour cible embarquée : migration de code existant (Ender.js) vers JQuery, portage des tests unitaires, validation du rendu HTML/CSS/JS</p>
+                        <p lang="en">Migrate existing code from Ender.js bundle to JQuery. Port main code and test suite, ensure good graphical rendering (HTML/CSS/JS)</p>
+                        <p class="keywords">Javascript, HTML, CSS, JQuery, Backbone, Jasmine, Node, Git</p>
+                        <span class="cd-client"><img src="images/clients/schneider-electric.png" alt="Schneider Electric" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2014-12">12/2014</abbr>
+                            -
+                            <abbr class="dtend" title="2015-03">03/2015</abbr>
+                            <div class="adr">
+                                <span class="location">Gières</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">System developper</h2>
-				<h2 lang="fr">Développeur système</h2>
-                 <p lang="fr">
-Modélisation et développement d'un framework de migration de système de gestion documentaire. Ce système est destiné à traiter de grandes quantités de données, le métier ciblé étant la gestion immobilière (contrats, comptabilité..).
-                 </p>
-                 <p lang="en">
-Design and implementation of a migration framework for CMS systems
-                 </p>
-                 <p class="keywords">Big data, PHP, OOP, OOA/D</p>
-				<span class="cd-client"><img src="images/clients/logo_seiitra.png" alt="Seiitra" /></span>
-				<span class="cd-date">08/2014 - 12/2014</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
-
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2 lang="en">Software architect and developer</h2>
-				<h2 lang="fr">Architecte et développeur logiciel</h2>
-                 <p lang="fr">Soutien d'une équipe existante, apport de méthodologies et d'environnement de développement (intégration continue, gestion de livraison)</p>
-                 <p lang="fr">Définition d'architecture logicielle reposant sur UML, Eclipse 4 et EMF</p>
-                 <p lang="en">Help migration from Matlab prototype to Java products ; reverse engineering, high level architecture, UML modeling, model transformation and code generation</p>
-                 <p class="keywords">Subversion, Trac, Java, Eclipse RCP, UML, OOA/D, OOP, EMF, JFace, Maven, Agile</p>
-				<span class="cd-client"><img src="images/clients/cea.png" alt="CEA" /></span>
-				<span class="cd-date">08/2013 - O8/2014</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Research engineer / Eclipse RCP developer</h2>
-				<h2 lang="fr">Ingénieur de recherche / Développeur Eclipse RCP</h2>
-                
-                <p lang="fr">Développement d'outils d'analyse d’exécution en vue d'optimiser la consommation énergétique de microcontroleurs</p>
-                <p lang="fr"> Développement de méthodes de conception et d'analyse basées sur les modèles : UML, IP-Xact et SysML en particulier</p>
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">System developper</h2>
+                        <h2 lang="fr">Développeur système</h2>
+                         <p lang="fr">Modélisation et développement d'un framework de migration de système de gestion documentaire. 
+                                      Ce système est destiné à traiter de grandes quantités de données, le métier ciblé étant la 
+                                      gestion immobilière (contrats, comptabilité..).
+                         </p>
+                         <p lang="en">Design and implementation of a migration framework for CMS systems</p>
+                         <p class="keywords">Big data, PHP, OOP, OOA/D</p>
+                        <span class="cd-client"><img src="images/clients/logo_seiitra.png" alt="Seiitra" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2014-08">08/2014</abbr>
+                            -
+                            <abbr class="dtend" title="2014-12">12/2014</abbr>
+                            <div class="adr">
+                                <span class="location">Montbonnot</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
 
-                <p lang="en"> Develop analysis tools to calculate microcontroller power consumption from their various model</p>
-                <p lang="en"> Development of various Eclipse plugins and features</p>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-                <p class="keywords">C, SCXML, ARM, Eclipse RCP, UML, OOA/D, OOP, EMF, Maven, Java, Jenkins, IP-Xact, SysML</p>
-				<span class="cd-client"><img src="images/clients/cea.png" alt="CEA" /></span>
-				<span class="cd-date">10/2012 - O8/2013</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Software architect and developer</h2>
+                        <h2 lang="fr">Architecte et développeur logiciel</h2>
+                         <p lang="fr">Soutien d'une équipe existante, apport de méthodologies et d'environnement de développement (intégration continue, gestion de livraison)</p>
+                         <p lang="fr">Définition d'architecture logicielle reposant sur UML, Eclipse 4 et EMF</p>
+                         <p lang="en">Help migration from Matlab prototype to Java products ; reverse engineering, high level architecture, UML modeling, model transformation and code generation</p>
+                         <p class="keywords">Subversion, Trac, Java, Eclipse RCP, UML, OOA/D, OOP, EMF, JFace, Maven, tycho, Agile</p>
+                        <span class="cd-client"><img src="images/clients/cea.png" alt="CEA" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2013-08">08/2013</abbr>
+                            -
+                            <abbr class="dtend" title="2014-08">08/2014</abbr>
+                            <div class="adr">
+                                <span class="location">Grenoble</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Frontend developer</h2>
-				<h2 lang="fr">Développeur Web</h2>
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
-                <p lang="fr">Architecture et implémentation d'une application en utilisant le Google Web Toolkit, et interfaçant des composants Schneider</p>
-                <p lang="fr">Mise en place d'une ontologie spécifique et de ses outils d'exploitation</p>
-                
-                <p lang="en">Architecture and development of a Google Web Toolkit driven frontend for an automated sensors network controller</p>
-                <p class="keywords">GWT, OOP, Ontology, OWL, Maven, Drools, Agile, Java</p>
-				<span class="cd-client"><img src="images/clients/schneider-electric.png" alt="Schneider Electric" /></span>
-				<span class="cd-date">07/2011 - 09/2012</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Research engineer / Eclipse RCP developer</h2>
+                        <h2 lang="fr">Ingénieur de recherche / Développeur Eclipse RCP</h2>
+                        
+                        <p lang="fr">Développement d'outils d'analyse d’exécution en vue d'optimiser la consommation énergétique de microcontroleurs</p>
+                        <p lang="fr"> Développement de méthodes de conception et d'analyse basées sur les modèles : UML, IP-Xact et SysML en particulier</p>
 
+                        <p lang="en"> Develop analysis tools to calculate microcontroller power consumption from their various model</p>
+                        <p lang="en"> Development of various Eclipse plugins and features</p>
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+                        <p class="keywords">C, SCXML, ARM, Eclipse RCP, UML, OOA/D, OOP, EMF, Maven, tycho, Java, Jenkins, IP-Xact, SysML</p>
+                        <span class="cd-client"><img src="images/clients/cea.png" alt="CEA" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2012-10">10/2012</abbr>
+                            -
+                            <abbr class="dtend" title="2013-08">08/2013</abbr>
+                            <div class="adr">
+                                <span class="location">Grenoble</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Mobile application developer</h2>
-				<h2 lang="fr">Développeur d'application mobile</h2>
-                 <p lang="fr">
-Développement de l'application de recherche et vente de musique pour Orange, avec pour cible les terminaux Java (J2ME) et Android
-                 </p>
-                 <p lang="en">
-Implementation of Orange's internal music service for mobile platform.
-                 </p>
-                 <p class="keywords">J2ME, Android, Agile, Java</p>
-				<span class="cd-client"><img src="images/clients/orange.png" alt="Orange" /></span>
-				<span class="cd-date">03/2010 - 07/2011</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Frontend developer</h2>
+                        <h2 lang="fr">Développeur Web</h2>
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Backend developer</h2>
-				<h2 lang="fr">Développeur système</h2>
-                 <p lang="fr">
-Maintenance et amélioration de la chaîne d'alimentation et d’agrégation des portails Média de Yahoo. 
-Travail avec de nombreux partenaires et formats de données.
-                 </p>
-                 <p lang="en">
-Multiple data source integration and aggregation into Yahoo's Media portals (news, finance, ..).
-                 </p>
-                 <p class="keywords">Perl, Big data, Agile</p>
-				<span class="cd-client"><img src="images/clients/yahoo.png" alt="Yahoo!" /></span>
-				<span class="cd-date">12/2007 - 03/2011</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                        <p lang="fr">Architecture et implémentation d'une application en utilisant le Google Web Toolkit, et interfaçant des composants Schneider</p>
+                        <p lang="fr">Mise en place d'une ontologie spécifique et de ses outils d'exploitation</p>
+                        
+                        <p lang="en">Architecture and development of a Google Web Toolkit driven frontend for an automated sensors network controller</p>
+                        <p class="keywords">GWT, OOP, Ontology, OWL, Maven, Drools, Agile, Java</p>
+                        <span class="cd-client"><img src="images/clients/schneider-electric.png" alt="Schneider Electric" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2011-07">07/2011</abbr>
+                            -
+                            <abbr class="dtend" title="2012-09">09/2012</abbr>
+                            <div class="adr">
+                                <span class="location">Grenoble</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
 
+                    </div> <!-- cd-timeline-content -->
+                </div> <!-- cd-timeline-block -->
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
-			<div class="cd-timeline-content">
-				<h2 lang="en">Java/J2EE developer</h2>
-				<h2 lang="fr">Développeur Java/J2EE</h2>
-                 <p lang="fr">
-Amélioration et développement d'applications temps-réel destinées aux opérateurs de la salle blanche.
-                 </p>
-                 <p lang="en">
-Real-time applications development and maintenance used by clean rooms operators.
-                 </p>
-                 <p class="keywords">Java, J2EE, OOP</p>
-				<span class="cd-client"><img src="images/clients/st.png" alt="ST Microelectronics" /></span>
-				<span class="cd-date">02/2007 - 11/2007</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Mobile application developer</h2>
+                        <h2 lang="fr">Développeur d'application mobile</h2>
+                         <p lang="fr">
+        Développement de l'application de recherche et vente de musique pour Orange, avec pour cible les terminaux Java (J2ME) et Android
+                         </p>
+                         <p lang="en">
+        Implementation of Orange's internal music service for mobile platform.
+                         </p>
+                         <p class="keywords">J2ME, Android, Agile, Java</p>
+                        <span class="cd-client"><img src="images/clients/orange.png" alt="Orange" /></span>
+                        <span class="cd-date">03/2010 - 07/2011</span>
 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/clients/open.png" alt="Open groupe">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2 lang="en">Web application developer</h2>
-				<h2 lang="fr">Développeur d'application web</h2>
-                 <p lang="fr">
-Architecture d'un framework PHP et développement d'un portail interne destiné a mettre en relation les salariés du groupe et les laboratoire, pour permettre des tests produit en interne.
-                 </p>
-                 <p lang="en">
-End to end work for an internal web portal, aimed on relationship ease between search labs and employees, to allow easy and efficient internal product test. Reuse of the home-made framework on other projects.
-                 </p>
-                 <p class="keywords">PHP, HTML, CSS, OOA/D, OOP</p>
-				<span class="cd-client"><img src="images/clients/orange.png" alt="Orange" /></span>
-				<span class="cd-date">03/2004 - 02/2007</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
-
-<!-- PARIS -->
-
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/blank.png" alt="Synaptique IT">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2 lang="en">XML/XSLT developer</h2>
-				<h2 lang="fr">Développeur XML/XSLT</h2>
-                 <p lang="fr">
-Développement d'un outil permettant aux laboratoires de publier plus facilement le fruit de leurs recherches sur l'Intranet en utilisant des collections de ressources et une fiche de description XML.
-                 </p>
-                 <p lang="en">
-Simple web publication tool development to ease search labs documentation publication and increase their visibility.
-                 </p>
-                 <p class="keywords">Perl, OOP, XML, XSLT</p>
-				<span class="cd-client"><img src="images/clients/oce.png" alt="OCE (a Xerox company)" /></span>
-				<span class="cd-date">03/2003 - 05/2003</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/blank.png" alt="Synaptique IT">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2 lang="en">Frontend developer</h2>
-				<h2 lang="fr">Développeur pour frontal web</h2>
-                 <p lang="fr">
-- Maintenance et amélioration de la plateforme résidentielle d'accès a internet de Neuf.
-Implication de nombreux produits : web, annuaires, FTP, Radius, provisioning... dans un environnement de production ultra réactif.
-- Création d'outils de suivi de bug et de livraison
-- Encadrement d'équipes réduites (2 à 4 personnes)
-                 </p>
-                 <p lang="en">
-Maintenance and evolution for SFR (former Neuf Telecom) ISP information system. Our team was responsible of whole backend and frontend for individuals internet access.
-                 </p>
-                 <p class="keywords">LDAP, PHP, Oracle, Perl</p>
-				<span class="cd-client"><img src="images/clients/9.jpg" alt="Former 9Telecom, now SFR" /></span>
-				<span class="cd-date">06/2001 - 02/2003</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2010-03">03/2010</abbr>
+                            -
+                            <abbr class="dtend" title="2011-07">07/2011</abbr>
+                            <div class="adr">
+                                <span class="location">Meylan</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
 
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img">
-				<img src="images/blank.png" alt="Synaptique IT">
-			</div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
 
-			<div class="cd-timeline-content">
-				<h2 lang="fr">Ingénieur d'étude</h2>
-				<h2 lang="en">Engineer</h2>
-                 <p lang="fr">Missions internes</p>
-                 <p lang="en">Internal missions</p>
-                 <p class="keywords">SSL, PKI, X509 Certificates, Java, OpenVPN</p>
-				<span class="cd-date">01/2001 - 06/2001</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Backend developer</h2>
+                        <h2 lang="fr">Développeur système</h2>
+                         <p lang="fr">
+        Maintenance et amélioration de la chaîne d'alimentation et d’agrégation des portails Média de Yahoo. 
+        Travail avec de nombreux partenaires et formats de données.
+                         </p>
+                         <p lang="en">
+        Multiple data source integration and aggregation into Yahoo's Media portals (news, finance, ..).
+                         </p>
+                         <p class="keywords">Perl, Big data, Agile</p>
+                        <span class="cd-client"><img src="images/clients/yahoo.png" alt="Yahoo!" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2007-12">12/2007</abbr>
+                            -
+                            <abbr class="dtend" title="2011-03">03/2011</abbr>
+                            <div class="adr">
+                                <span class="location">Grenoble</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
+
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Java/J2EE developer</h2>
+                        <h2 lang="fr">Développeur Java/J2EE</h2>
+                         <p lang="fr">
+        Amélioration et développement d'applications temps-réel destinées aux opérateurs de la salle blanche.
+                         </p>
+                         <p lang="en">
+        Real-time applications development and maintenance used by clean rooms operators.
+                         </p>
+                         <p class="keywords">Java, J2EE, OOP</p>
+                        <span class="cd-client"><img src="images/clients/st.png" alt="ST Microelectronics" /></span>
+                        <span class="cd-date">02/2007 - 11/2007</span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2007-02">02/2007</abbr>
+                            -
+                            <abbr class="dtend" title="2007-11">11/2007</abbr>
+                            <div class="adr">
+                                <span class="location">Crolles</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/clients/open.png" alt="Open groupe">
+                    </div> <!-- cd-timeline-img -->
+
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Web application developer</h2>
+                        <h2 lang="fr">Développeur d'application web</h2>
+                         <p lang="fr">
+        Architecture d'un framework PHP et développement d'un portail interne destiné a mettre en relation les salariés du groupe et les laboratoire, pour permettre des tests produit en interne.
+                         </p>
+                         <p lang="en">
+        End to end work for an internal web portal, aimed on relationship ease between search labs and employees, to allow easy and efficient internal product test. Reuse of the home-made framework on other projects.
+                         </p>
+                         <p class="keywords">PHP, HTML, CSS, OOA/D, OOP</p>
+                        <span class="cd-client"><img src="images/clients/orange.png" alt="Orange" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2004-03">03/2004</abbr>
+                            -
+                            <abbr class="dtend" title="2007-02">02/2007</abbr>
+                            <div class="adr">
+                                <span class="location">Meylan</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+        <!-- PARIS -->
+
+
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/blank.png" alt="Synaptique IT">
+                    </div> <!-- cd-timeline-img -->
+
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">XML/XSLT developer</h2>
+                        <h2 lang="fr">Développeur XML/XSLT</h2>
+                         <p lang="fr">
+        Développement d'un outil permettant aux laboratoires de publier plus facilement le fruit de leurs recherches sur l'Intranet en utilisant des collections de ressources et une fiche de description XML.
+                         </p>
+                         <p lang="en">
+        Simple web publication tool development to ease search labs documentation publication and increase their visibility.
+                         </p>
+                         <p class="keywords">Perl, OOP, XML, XSLT</p>
+                        <span class="cd-client"><img src="images/clients/oce.png" alt="OCE (a Xerox company)" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2003-03">03/2003</abbr>
+                            -
+                            <abbr class="dtend" title="2003-05">05/2003</abbr>
+                            <div class="adr">
+                                <span class="location">Creteil</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/blank.png" alt="Synaptique IT">
+                    </div> <!-- cd-timeline-img -->
+
+                    <div class="cd-timeline-content">
+                        <h2 lang="en">Frontend developer</h2>
+                        <h2 lang="fr">Développeur pour frontal web</h2>
+                         <p lang="fr">
+        - Maintenance et amélioration de la plateforme résidentielle d'accès a internet de Neuf.
+        Implication de nombreux produits : web, annuaires, FTP, Radius, provisioning... dans un environnement de production ultra réactif.
+        - Création d'outils de suivi de bug et de livraison
+        - Encadrement d'équipes réduites (2 à 4 personnes)
+                         </p>
+                         <p lang="en">
+        Maintenance and evolution for SFR (former Neuf Telecom) ISP information system. Our team was responsible of whole backend and frontend for individuals internet access.
+                         </p>
+                         <p class="keywords">LDAP, PHP, Oracle, Perl</p>
+                        <span class="cd-client"><img src="images/clients/9.jpg" alt="Former 9Telecom, now SFR" /></span>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2001-06">06/2001</abbr>
+                            -
+                            <abbr class="dtend" title="2003-02">02/2003</abbr>
+                            <div class="adr">
+                                <span class="location">Paris 8e</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+
+            <div class="cd-timeline-block experience vevent">
+                    <div class="cd-timeline-img">
+                        <img src="images/blank.png" alt="Synaptique IT">
+                    </div> <!-- cd-timeline-img -->
+
+                    <div class="cd-timeline-content">
+                        <h2 lang="fr">Ingénieur d'étude</h2>
+                        <h2 lang="en">Engineer</h2>
+                         <p lang="fr">Missions internes</p>
+                         <p lang="en">Internal missions</p>
+                         <p class="keywords">SSL, PKI, X509 Certificates, Java, OpenVPN</p>
+                        <span class="cd-date">
+                            <abbr class="dtstart" title="2001-01">01/2001</abbr>
+                            -
+                            <abbr class="dtend" title="2001-06">06/2001</abbr>
+                            <div class="adr">
+                                <span class="location">Paris 8e</span>,<span class="country-name">France</span>
+                            </div>
+                         </span>
+                    </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+        
+
+
         </section>
-</div>		
+        </div> <!-- main -->
 
         <!-- Footer -->
 			<footer id="footer">

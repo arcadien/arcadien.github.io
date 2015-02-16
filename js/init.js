@@ -40,17 +40,21 @@
 
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
-        
+       
+                // activate french by default and attach
+                // event handler on the langage switch icon 
                 nextLanguage(); 
-                
                 $("#langswitcher").on("click", function(){
                  nextLanguage();
                 });
+                
                 presentSkills("#skillCloud");
+                
                 // avoid FOUC #3
                 $html = $('html');
                 $html.removeClass('js');
         
+                
                 presentTimeLine();
 
 			});
