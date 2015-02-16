@@ -117,14 +117,13 @@ function presentSkills(parentElement) {
         var itemCounter = 0;
         wordKeys.forEach(function(key) {
             if (key.size > 1) {
-                if (itemCounter == 6) {
-                    itemCounter = 0;
+                if (itemCounter == 5) {
                     ul = $("<ul style='float: left; margin-left : 20px;'/>")
                             .appendTo(cloud);
-                } else {
-                    itemCounter++;
+                    itemCounter = 0;
                 }
                 $('<li />').html(key.text).appendTo(ul);
+                itemCounter++;
             }
         });
 
