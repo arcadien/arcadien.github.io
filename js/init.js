@@ -41,9 +41,6 @@
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
        
-                // activate french by default and attach
-                // event handler on the langage switch icon 
-                nextLanguage(); 
                 $("#langswitcher").on("click", function(){
                  nextLanguage();
                 });

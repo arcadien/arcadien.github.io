@@ -131,7 +131,7 @@ function presentSkills(parentElement) {
 
         /* sufficient width for cloud display */
         var fill = d3.scale.category20();
-        d3.layout.cloud().size([ 800, 300 ]).words(collectKeywords(true))
+        d3.layout.cloud().size([ 600, 400 ]).words(collectKeywords(true))
                 .padding(5).rotate(function() {
                     return Math.floor(Math.random() * 16 - 8);
                 }).font("AwsomeFont").fontSize(function(d) {
@@ -141,9 +141,9 @@ function presentSkills(parentElement) {
     }
 
     function draw(words) {
-        d3.select("#skillCloud").append("svg").attr("width", 800).attr(
-                "height", 300).append("g").attr("transform",
-                "translate(400,150)").selectAll("text").data(words).enter()
+        d3.select("#skillCloud").append("svg").attr("width", 600).attr(
+                "height", 400).append("g").attr("transform",
+                "translate(300,200)").selectAll("text").data(words).enter()
                 .append("text").style("font-size", function(d) {
                     return d.size + "px";
                 }).style("font-family", "Impact").style("fill", function(d, i) {
