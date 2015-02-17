@@ -39,7 +39,7 @@
         <!-- @see http://www.jasondavies.com/wordcloud/ -->
         <script src="js/d3.min.js"></script>
 		<script src="js/d3.layout.cloud.js"></script>
-		<script src="js/skills.js"></script>
+		<script src="js/skills.min.js"></script>
 
         <!-- timeline -->
 	    <script src="js/modernizr.min.js"></script> <!-- Modernizr --> 
@@ -48,7 +48,7 @@
  
         <!-- avoid FOUC #3 -->
         <!-- init will remove the .js class from html element -->
-		<script src="js/init.js"></script>
+		<script src="js/init.min.js"></script>
         
         <noscript>
 			<link rel="stylesheet" href="css/skel.css" />

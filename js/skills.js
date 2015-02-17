@@ -91,6 +91,31 @@ function collectKeywords(doPonderation) {
     return words;
 };
 
+
+/**
+* low-level graph function that draw keywords on the svg canvas 
+*/
+function draw(words) {
+        
+    var fill = d3.scale.category20();
+    d3.select("#skillCloud").append("svg").attr("width", 600).attr(
+        "height", 400).append("g").attr("transform",
+        "translate(300,200)").selectAll("text").data(words).enter()
+        .append("text").style("font-size", function(d) {
+            return d.size + "px";
+        }).style("font-family", "Source Sans Pro").style("fill", function(d, i) {
+            return fill(i);
+        }).attr("text-anchor", "middle").attr(
+        "transform",
+        function(d) {
+            return "translate(" + [ d.x, d.y ] + ")rotate("
+        + d.rotate + ")";
+        }).text(function(d) {
+            return d.text;
+        });
+}
+
+
 /**
  * Collects keywords in the page (ie, each comma-separated value in elements
  * that have the "keyword" class) and render them in parentElement.
@@ -116,7 +141,6 @@ function presentSkills(parentElement) {
     if (skel.isActive('skillcloud')) {
 
         /* sufficient width for cloud display */
-        var fill = d3.scale.category20();
         
         d3.layout.cloud().size([ 600, 400 ]).words(WORD_LIST)
                 .padding(5).rotate(function() {
@@ -125,23 +149,7 @@ function presentSkills(parentElement) {
                     return d.size;
                 }).on("end", draw).start();
 
-        function draw(words) {
-            d3.select("#skillCloud").append("svg").attr("width", 600).attr(
-                "height", 400).append("g").attr("transform",
-                "translate(300,200)").selectAll("text").data(words).enter()
-                .append("text").style("font-size", function(d) {
-                    return d.size + "px";
-                }).style("font-family", "Source Sans Pro").style("fill", function(d, i) {
-                    return fill(i);
-                }).attr("text-anchor", "middle").attr(
-                        "transform",
-                        function(d) {
-                            return "translate(" + [ d.x, d.y ] + ")rotate("
-                                    + d.rotate + ")";
-                        }).text(function(d) {
-                    return d.text;
-                });
-        }
+        
     }else{
 
         /*
