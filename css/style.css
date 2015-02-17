@@ -1,21 +1,19 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 /*
 	Strata by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* microformats */
-.vcard {
-    height: 0px !important;
-    width: 0px !important;
-}
-
-.vcard > img {
-        width: 0px;
-        height: 0px;
+/* microformats vcards are not displayed. If just hidden, they are not 'seen' by parsers */
+.hcard, .vcard {
+    display: none;
+    height: 0px;
+    width: 0px;
+    float: right;
+    z-index: -1;
 }
 
 .include {

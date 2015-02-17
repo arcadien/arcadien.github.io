@@ -8,6 +8,8 @@
  * times are displayed.
  */
 
+var WORD_LIST = undefined;
+
 /**
  * Return an array of objects, as : {text : "keyword", size : weightOfKeyword}
  * 
@@ -18,18 +20,18 @@
  *            object "size" attrribute is the occurence count of the keyword.
  */
 function collectKeywords(doPonderation) {
-    var wordsMap = [];
+    WORD_LIST = [];
 
     var page = $("#top");
     page.find(".keywords").each(function(index) {
         kws = $(this).text().split(", ");
         for (kw in kws) {
             kw = kws[kw];
-            var prop = wordsMap[kw];
+            var prop = WORD_LIST[kw];
             if (undefined == prop) {
-                wordsMap[kw] = 1;
+                WORD_LIST[kw] = 1;
             } else {
-                wordsMap[kw] = prop + 1;
+                WORD_LIST[kw] = prop + 1;
             }
         }
     });
@@ -37,25 +39,38 @@ function collectKeywords(doPonderation) {
     // ponderation is only used for word cloud
     if (true === doPonderation) {
         var maxOccurence = 0;
-        for (keyword in wordsMap) {
-            if (!wordsMap.hasOwnProperty(keyword)) {
+        for (keyword in WORD_LIST) {
+            if (!WORD_LIST.hasOwnProperty(keyword)) {
                 continue;
             }
-            if (wordsMap[keyword] > maxOccurence) {
-                maxOccurence = wordsMap[keyword];
+            if (WORD_LIST[keyword] > maxOccurence) {
+                maxOccurence = WORD_LIST[keyword];
             }
         }
 
         // max font size in px
         var maxSize = 100;
+
+        if(skel.isActive('xlarge')){
+                maxSize = 200;
+        }else if(skel.isActive('large')){
+                maxSize = 150;
+        }else if(skel.isActive('medium')){
+                maxSize = 100;
+        }else if(skel.isActive('small')){
+                maxSize = 100;
+        }else if(skel.isActive('xsmall')){
+                maxSize = 100;
+        }
+
         var ratio = maxSize / maxOccurence;
 
         // ponderate each keyword size
-        for (keyword in wordsMap) {
-            if (!wordsMap.hasOwnProperty(keyword)) {
+        for (keyword in WORD_LIST) {
+            if (!WORD_LIST.hasOwnProperty(keyword)) {
                 continue;
             }
-            wordsMap[keyword] = wordsMap[keyword] * ratio;
+            WORD_LIST[keyword] = WORD_LIST[keyword] * ratio;
         }
     }
 
@@ -64,13 +79,13 @@ function collectKeywords(doPonderation) {
     // TODO feed that structure directly
     var words = [];
 
-    for (keyword in wordsMap) {
-        if (!wordsMap.hasOwnProperty(keyword)) {
+    for (keyword in WORD_LIST) {
+        if (!WORD_LIST.hasOwnProperty(keyword)) {
             continue;
         }
         words.push({
             text : keyword,
-            size : wordsMap[keyword]
+            size : WORD_LIST[keyword]
         });
     }
     return words;
@@ -92,13 +107,48 @@ function collectKeywords(doPonderation) {
 function presentSkills(parentElement) {
     var cloud = $(parentElement);
 
-    if (skel.isActive("small")) {
+    $('#skillCloud').empty();
+
+    if(undefined == WORD_LIST){
+        WORD_LIST = collectKeywords(true);
+    }
+
+    if (skel.isActive('skillcloud')) {
+
+        /* sufficient width for cloud display */
+        var fill = d3.scale.category20();
+        
+        d3.layout.cloud().size([ 600, 400 ]).words(WORD_LIST)
+                .padding(5).rotate(function() {
+                    return Math.floor(Math.random() * 16 - 8);
+                }).font("Source Sans Pro").fontSize(function(d) {
+                    return d.size;
+                }).on("end", draw).start();
+
+        function draw(words) {
+            d3.select("#skillCloud").append("svg").attr("width", 600).attr(
+                "height", 400).append("g").attr("transform",
+                "translate(300,200)").selectAll("text").data(words).enter()
+                .append("text").style("font-size", function(d) {
+                    return d.size + "px";
+                }).style("font-family", "Source Sans Pro").style("fill", function(d, i) {
+                    return fill(i);
+                }).attr("text-anchor", "middle").attr(
+                        "transform",
+                        function(d) {
+                            return "translate(" + [ d.x, d.y ] + ")rotate("
+                                    + d.rotate + ")";
+                        }).text(function(d) {
+                    return d.text;
+                });
+        }
+    }else{
 
         /*
          * small devices : output a sorted <ul> rather than full cloud
          */
         /* first sort the word list based on values */
-        var wordMap = collectKeywords(false);
+        var wordMap = WORD_LIST.slice();
         wordMap.sort = function sortMap(sortFunc) {
             var results = [];
             for (key in this) {
@@ -115,47 +165,29 @@ function presentSkills(parentElement) {
         var ul = $("<ul style='float: left;'/>").appendTo(cloud);
 
         var itemCounter = 0;
+        var totalCounter = 1; // no more than 3*5 elements to avoid layout break
         wordKeys.forEach(function(key) {
-            if (key.size > 1) {
+            if (key.size > 1 && totalCounter < 16) {
                 if (itemCounter == 5) {
                     ul = $("<ul style='float: left; margin-left : 20px;'/>")
                             .appendTo(cloud);
                     itemCounter = 0;
                 }
-                $('<li />').html(key.text).appendTo(ul);
+                if(totalCounter == 15){
+    
+                    var lang = $('html').attr('lang');
+                    if(lang == "fr"){
+                        $('<li />').html('et plus encore!').appendTo(ul);
+                    }else{
+                        $('<li />').html('and more!').appendTo(ul);
+                    }
+                }else{
+                    $('<li />').html(key.text).appendTo(ul);
+                }
                 itemCounter++;
+                totalCounter++;
             }
         });
 
-    } else {
-
-        /* sufficient width for cloud display */
-        var fill = d3.scale.category20();
-        d3.layout.cloud().size([ 800, 300 ]).words(collectKeywords(true))
-                .padding(5).rotate(function() {
-                    return Math.floor(Math.random() * 16 - 8);
-                }).font("AwsomeFont").fontSize(function(d) {
-                    return d.size;
-                }).on("end", draw).start();
-
-    }
-
-    function draw(words) {
-        d3.select("#skillCloud").append("svg").attr("width", 800).attr(
-                "height", 300).append("g").attr("transform",
-                "translate(400,150)").selectAll("text").data(words).enter()
-                .append("text").style("font-size", function(d) {
-                    return d.size + "px";
-                }).style("font-family", "Impact").style("fill", function(d, i) {
-                    return fill(i);
-                }).attr("text-anchor", "middle").attr(
-                        "transform",
-                        function(d) {
-                            return "translate(" + [ d.x, d.y ] + ")rotate("
-                                    + d.rotate + ")";
-                        }).text(function(d) {
-                    return d.text;
-                });
-    }
-
+   }
 };
