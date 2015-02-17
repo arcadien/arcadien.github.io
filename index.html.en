@@ -13,6 +13,7 @@
 		<meta name="keywords" content="awsome cv, awsome guy, software architect, MDD, MDA, UML, Eclipse RCP" />
 
         <link rel="profile" href="http://microformats.org/profile/hcalendar">
+        <link rel="profile" href="http://microformats.org/profile/hresume">
 		
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -172,7 +173,7 @@
                                   <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
 
                                  <span class="cd-date">
-                                    <abbr class="dtstart" title="2014-09">Sept. 2014</abbr>
+                                    <abbr class="dtstart" title="2014-09">09/2014</abbr>
                                     -
                                     <abbr class="dtend" title="2015">Now</abbr>
                                     <div class="adr">

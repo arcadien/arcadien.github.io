@@ -13,6 +13,7 @@
 		<meta name="keywords" content="awsome cv, awsome guy, software architect, MDD, MDA, UML, Eclipse RCP" />
 
         <link rel="profile" href="http://microformats.org/profile/hcalendar">
+        <link rel="profile" href="http://microformats.org/profile/hresume">
 		
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -38,7 +39,7 @@
         <!-- @see http://www.jasondavies.com/wordcloud/ -->
         <script src="js/d3.min.js"></script>
 		<script src="js/d3.layout.cloud.js"></script>
-		<script src="js/skills.min.js"></script>
+		<script src="js/skills.js"></script>
 
         <!-- timeline -->
 	    <script src="js/modernizr.min.js"></script> <!-- Modernizr --> 
@@ -47,7 +48,7 @@
  
         <!-- avoid FOUC #3 -->
         <!-- init will remove the .js class from html element -->
-		<script src="js/init.min.js"></script>
+		<script src="js/init.js"></script>
         
         <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -171,9 +172,9 @@
                                   <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
 
                                  <span class="cd-date">
-                                    <abbr class="dtstart" title="2014-09">Sept. 2014</abbr>
+                                    <abbr class="dtstart" title="2014-09">09/2014</abbr>
                                     -
-                                    <abbr class="dtend" title="2015">Now</abbr>
+                                    <abbr class="dtend" title="2015">maintenant</abbr>
                                     <div class="adr">
                                         <span class="location">Grenoble</span>,<span class="country-name">France</span>
                                     </div>

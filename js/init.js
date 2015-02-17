@@ -25,7 +25,8 @@
 			large: { media: '(max-width: 1280px)', href: 'css/style-large.css', grid: { gutters: ['2em', 0] } },
 			medium: { media: '(max-width: 980px)', href: 'css/style-medium.css'},
 			small: { media: '(max-width: 736px)', href: 'css/style-small.css', grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false } },
-			xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css' }
+			xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css' },
+			skillcloud: { media: '(min-width: 600px)'}
 		}
 	});
 
@@ -53,6 +54,25 @@
         
                 
                 presentTimeLine();
+
+                skel.on('+skillcloud', function() {
+                        presentSkills("#skillCloud");
+                });
+                
+                skel.on('-skillcloud', function() {
+                        presentSkills("#skillCloud");
+                });
+                
+                skel.on('+xlarge', function() {
+                        presentSkills("#skillCloud");
+                });
+                skel.on('+large', function() {
+                        presentSkills("#skillCloud");
+                });
+                skel.on('+medium', function() {
+                        presentSkills("#skillCloud");
+                });
+                
 
 			});
 
