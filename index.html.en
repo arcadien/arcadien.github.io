@@ -126,9 +126,8 @@
 							<h2>Welcome on Skima, my own place on the Network. This webpage is a presentation of my professional life.</h2>
 						</header>
                         <div>
-						  <p>After a well-diversified journey in IT software world, i now specialize in software architecture.</p>
-						  <p>I rely on UML and my expertise in continuous integration system (Maven, CMake, Jenkins, Git, git-flow) 
-					 	to create Eclipse RCP products. I'm also dad of Basile!</p>
+						  <p>After a well-diversified journey in IT software world, i co-founded <a href="http://www.pollen-technology.com">Pollen Technology</a>, and work as product manager since October 2015.
+						  <p>I rely on my team and my personnal skills to develop our Platypus platform. I'm also dad of Basile!</p>
                         </div>
                        
                          <p>This page content validates HTML5 and WCAG specifications. It also uses microformat to describe its content.<p>
@@ -164,12 +163,11 @@
 
                                   <div class="description">
                                     <p>Responsible of global architecture and development of our Platypus platform</p>
-                                    <p>Implementation of continuous delivery stream</p>
-                                    <p>Development of an UML implementation of the <a href="http://www.bipm.org/en/publications/guides/vim.html">VIM</a>, 
-                                       and development of an Eclipse RCP application to manipulate it</p>
+                                    <p>Implementation and maintenance of continuous delivery stream</p>
+                                    <p>Model driven development, Eclipse RCP based products</p>
                                   </div>
 
-                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho</p>
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi</p>
                                   <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
 
                                  <span class="cd-date">

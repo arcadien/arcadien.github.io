@@ -126,8 +126,8 @@
 							<h2>Bienvenue sur Skima, mon espace dans le réseau. Cette page présente les grandes lignes de ma vie professionnelle.</h2>
 						</header>
                         <div>
-						  <p>Après un voyage bien diversifié dans le monde des nouvelles technologies, je me spécialise désormais dans l'architecture et la modélisation logicielle.</p>
-						  <p>J'utilise actuellement UML et mon expertise en système d'intégration (Maven, CMake, Jenkins, Git, git-flow) pour fournir des produits logiciels basé sur Eclips RCP. Je suis aussi le papa de Basile!</p>
+						  <p>Après un voyage bien diversifié dans le monde des nouvelles technologies, j'ai co-fondé <a href="http://www.pollen-technology.com">Pollen Technology</a> ou je tiens le poste de responsable produit depuis octobre 2015.</p>
+						  <p>Je compte sur mon équipe et mes compétences personnelles pour développer notre plateforme Platypus. Je suis aussi le papa de Basile!</p>
 					    </div>
                        
                          <p>Cette page est conforme aux spécification HTML 5 et WCAG niveau 2. Elle utilise les microformats pour décrire son contenu.<p>
@@ -163,12 +163,11 @@
 
                                   <div class="description">
                                     <p>Responsable de l'architecture et du développement de notre plateforme Platypus</p>
-                                    <p>Mise en place du processus de livraison continue</p>
-                                    <p>Développement d'une implémentation UML du <a href="http://www.bipm.org/fr/publications/guides/vim.html">VIM</a>, 
-                                       et d'une application Eclipse RCP pour la manipuler</p>
+                                    <p>Mise en place et maintenance du processus de livraison continue</p>
+                                    <p>Développement piloté par les modèles, produits basés sur Eclipse RCP</p>
                                   </div>
 
-                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho</p>
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi</p>
                                   <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
 
                                  <span class="cd-date">
