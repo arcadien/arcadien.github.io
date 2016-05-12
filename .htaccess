@@ -1,0 +1,5 @@
+Options +MultiViews 
+AddLanguage fr .fr
+AddLanguage en .en
+LanguagePriority fr en
+
