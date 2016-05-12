@@ -71,7 +71,7 @@
                 <span><a class="u-email email" href="mailto:aurelien@skima.fr">Adresse de couriel de Aurélien Labrosse</a></span>
                 <span><a class="u-url url" href="http://www.skima.fr/">cv en ligne de Aurélien Labrosse</a></span>
                 <span class="p-org org">
-                        <a href="#pollen-technology" class="include" title="Pollen Technology"><span class="organization-name">Pollen Technology</span></a>
+                        <a href="#pollen-metrology" class="include" title="Pollen Metrology"><span class="organization-name">Pollen Metrology</span></a>
                 </span>
                 <div class="p-adr adr">
                     <span class="p-postal-code postal-code">38000</span>
@@ -82,16 +82,16 @@
         
 
             <!-- ======================== employers -->
-            <div id="pollen-technology" class="h-card vcard">
-                <span class="p-name fn org">Pollen Technology</span>
-                <span><a class="u-url url" href="http://www.pollen-technology.com/">site internet de Pollen Technology</a></span>
+            <div id="pollen-metrology" class="h-card vcard">
+                <span class="p-name fn org">Pollen Metrology</span>
+                <span><a class="u-url url" href="http://www.pollen-metrology.com/">site internet de Pollen Metrology</a></span>
                 <div class="p-adr adr">
                     <span class="p-street-address street-address">PO GateOne, 31 rue Gustave Eiffel</span>
                     <span class="p-postal-code postal-code">38000</span>
                     <span class="p-locality locality">Grenoble</span>
                     <span class="p-country country-name">France</span>
                 </div>
-                <img class="u-logo logo" alt="Pollen Technology logo" src="images/clients/pollen-disc.png" />
+                <img class="u-logo logo" alt="Pollen Metrology logo" src="images/clients/pollen-disc.png" />
             </div>
             <div id="open-groupe" class="h-card vcard">
                 <span class="p-name fn org">Open Groupe</span>
@@ -126,7 +126,7 @@
 							<h2>Bienvenue sur Skima, mon espace dans le réseau. Cette page présente les grandes lignes de ma vie professionnelle.</h2>
 						</header>
                         <div>
-						  <p>Après un voyage bien diversifié dans le monde des nouvelles technologies, j'ai co-fondé <a href="http://www.pollen-technology.com">Pollen Technology</a> ou je tiens le poste de responsable produit depuis octobre 2015.</p>
+						  <p>Après un voyage bien diversifié dans le monde des nouvelles technologies, j'ai co-fondé <a href="http://www.pollen-metrology.com">Pollen Metrology</a> ou je tiens le poste de responsable produit depuis octobre 2015.</p>
 						  <p>Je compte sur mon équipe et mes compétences personnelles pour développer notre plateforme Platypus. Je suis aussi le papa de Basile!</p>
 					    </div>
                        
@@ -152,10 +152,10 @@
             <div class="cd-timeline-block experience vevent">
 
                         <a href="#al-name"           class="contact include" title="Aurélien Labrosse"></a>
-                        <a href="#pollen-technology" class="org include"     title="Employer"></a>
+                        <a href="#pollen-metrology" class="org include"     title="Employer"></a>
 
                         <div class="cd-timeline-img">
-                                <img src="images/clients/pollen-disc.png" alt="Pollen Technology" />
+                                <img src="images/clients/pollen-disc.png" alt="Pollen Metrology" />
                         </div>
 
                         <div class="cd-timeline-content">
@@ -165,10 +165,11 @@
                                     <p>Responsable de l'architecture et du développement de notre plateforme Platypus</p>
                                     <p>Mise en place et maintenance du processus de livraison continue</p>
                                     <p>Développement piloté par les modèles, produits basés sur Eclipse RCP</p>
+				    <p>Depuis Janvier 2016, je pilote et participe à la migration de la plateforme de Java/Eclipse vers C++/Qt</p>
                                   </div>
 
-                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi</p>
-                                  <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi, C++, ITK, VTK, MiTK, OpenCV, Eigen</p>
+                                  <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Metrology" /></span>
 
                                  <span class="cd-date">
                                     <abbr class="dtstart" title="2014-09">09/2014</abbr>

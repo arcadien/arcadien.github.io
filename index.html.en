@@ -71,7 +71,7 @@
                 <span><a class="u-email email" href="mailto:aurelien@skima.fr">Aurélien Labrosse email address</a></span>
                 <span><a class="u-url url" href="http://www.skima.fr/">Aurélien Labrosse home page</a></span>
                 <span class="p-org org">
-                        <a href="#pollen-technology" class="include" title="Pollen Technology"><span class="organization-name">Pollen Technology</span></a>
+                        <a href="#pollen-metrology" class="include" title="Pollen Metrology"><span class="organization-name">Pollen Metrology</span></a>
                 </span>
                 <div class="p-adr adr">
                     <span class="p-postal-code postal-code">38000</span>
@@ -82,16 +82,16 @@
         
 
             <!-- ======================== employers -->
-            <div id="pollen-technology" class="h-card vcard">
-                <span class="p-name fn org">Pollen Technology</span>
-                <span><a class="u-url url" href="http://www.pollen-technology.com/">Pollen Technology website</a></span>
+            <div id="pollen-metrology" class="h-card vcard">
+                <span class="p-name fn org">Pollen Metrology</span>
+                <span><a class="u-url url" href="http://www.pollen-metrology.com/">Pollen Metrology website</a></span>
                 <div class="p-adr adr">
                     <span class="p-street-address street-address">PO GateOne, 31 rue Gustave Eiffel</span>
                     <span class="p-postal-code postal-code">38000</span>
                     <span class="p-locality locality">Grenoble</span>
                     <span class="p-country country-name">France</span>
                 </div>
-                <img class="u-logo logo" alt="Pollen Technology logo" src="images/clients/pollen-disc.png" />
+                <img class="u-logo logo" alt="Pollen Metrology logo" src="images/clients/pollen-disc.png" />
             </div>
             <div id="open-groupe" class="h-card vcard">
                 <span class="p-name fn org">Open Groupe</span>
@@ -126,7 +126,7 @@
 							<h2>Welcome on Skima, my own place on the Network. This webpage is a presentation of my professional life.</h2>
 						</header>
                         <div>
-						  <p>After a well-diversified journey in IT software world, i co-founded <a href="http://www.pollen-technology.com">Pollen Technology</a>, and work as product manager since October 2015.
+						  <p>After a well-diversified journey in IT software world, i co-founded <a href="http://www.pollen-metrology.com">Pollen Metrology</a>, and work as product manager since October 2015.
 						  <p>I rely on my team and my personnal skills to develop our Platypus platform. I'm also dad of Basile!</p>
                         </div>
                        
@@ -152,10 +152,10 @@
             <div class="cd-timeline-block experience vevent">
 
                         <a href="#al-name"           class="contact include" title="Aurélien Labrosse"></a>
-                        <a href="#pollen-technology" class="org include"     title="Employer"></a>
+                        <a href="#pollen-metrology" class="org include"     title="Employer"></a>
 
                         <div class="cd-timeline-img">
-                                <img src="images/clients/pollen-disc.png" alt="Pollen Technology" />
+                                <img src="images/clients/pollen-disc.png" alt="Pollen Metrology" />
                         </div>
 
                         <div class="cd-timeline-content">
@@ -165,10 +165,11 @@
                                     <p>Responsible of global architecture and development of our Platypus platform</p>
                                     <p>Implementation and maintenance of continuous delivery stream</p>
                                     <p>Model driven development, Eclipse RCP based products</p>
+                                    <p>Since january 2016, I drive the migration of the whole platform from Java/Eclipse to C++/Qt</p>
                                   </div>
 
-                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi</p>
-                                  <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Technology" /></span>
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi, C++, ITK, VTK, MiTK, OpenCV, Eigen</p>
+                                  <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Metrology" /></span>
 
                                  <span class="cd-date">
                                     <abbr class="dtstart" title="2014-09">09/2014</abbr>
