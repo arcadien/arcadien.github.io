@@ -3,8 +3,8 @@
          var lang = $('html').attr('lang');
             
          if(lang == 'fr'){
-                 window.location.assign("http://www.skima.fr/index.html.en");
+                 window.location.assign("http://" + location.host + "/index.html.en");
          }else{
-                 window.location.assign("http://www.skima.fr/index.html.fr");
+                 window.location.assign("http://" + location.host + "/index.html.fr");
          }
     }    
