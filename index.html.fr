@@ -483,7 +483,7 @@
         <!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="https://www.linkedin.com/profile/view?id=37938671" class="icon fa fa-linkedin"><span class="label">Linkedin</span></a></li>
+					<li><a href="https://fr.linkedin.com/in/aurelienlabrosse" class="icon fa fa-linkedin"><span class="label">Linkedin</span></a></li>
 					<li><a href="https://github.com/arcadien"                       class="icon fa fa-github"><span class="label">Github</span></a></li>
 					<li><a href="http://stackoverflow.com/users/1152240/arcadien"   class="icon fa fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
 				</ul>
