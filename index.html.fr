@@ -86,8 +86,8 @@
                 <span class="p-name fn org">Pollen Metrology</span>
                 <span><a class="u-url url" href="http://www.pollen-metrology.com/">site internet de Pollen Metrology</a></span>
                 <div class="p-adr adr">
-                    <span class="p-street-address street-address">PO GateOne, 31 rue Gustave Eiffel</span>
-                    <span class="p-postal-code postal-code">38000</span>
+                    <span class="p-street-address street-address">9 Rue du Rocher de Lorzier</span>
+                    <span class="p-postal-code postal-code">38430</span>
                     <span class="p-locality locality">Grenoble</span>
                     <span class="p-country country-name">France</span>
                 </div>
@@ -163,12 +163,11 @@
 
                                   <div class="description">
                                     <p>Responsable de l'architecture et du développement de notre plateforme Platypus</p>
-                                    <p>Mise en place et maintenance du processus de livraison continue</p>
-                                    <p>Développement piloté par les modèles, produits basés sur Eclipse RCP</p>
-				    <p>Depuis Janvier 2016, je pilote et participe à la migration de la plateforme de Java/Eclipse vers C++/Qt</p>
+                                    <p>Mise en place et maintenance du processus de livraison continue, architecture logicielle</p>
+                                    <p>Développement piloté par les modèles, produits basés sur Eclipse RCP, produits C++/Qt</p>
                                   </div>
 
-                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi, C++, ITK, VTK, MiTK, OpenCV, Eigen</p>
+                                  <p class="keywords">OOA/D, OOP, Java, Eclipse RCP, UML, Jira, Git, Git-flow, Jenkins, CMake, Maven, Tycho, OSGi, C++, C++, C++, CMake, CMake, ITK, VTK, MiTK, OpenCV, Eigen, C++, C++, CMake, CMake, image processing</p>
                                   <span class="cd-client"><img src="images/clients/pollen.png" alt="Pollen Metrology" /></span>
 
                                  <span class="cd-date">
